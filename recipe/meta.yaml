@@ -1,5 +1,5 @@
 {% set name = "scanpy" %}
-{% set version = "1.7.2" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ad5e7afdf1948753cd27f6f27ee904df1ce455855eec8520985effe86c53c630
+  sha256: ed3a4502da53e85940f7b36cc8f0f1701f202fdd19d12da1afecd657db4289d6
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
-    - "scanpy = scanpy.cli:console_main"
+    - scanpy = scanpy.cli:console_main
 
 requirements:
   host:
@@ -63,7 +63,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Single-Cell Analysis in Python. Scales to >1M cells.'
+  summary: Single-Cell Analysis in Python. Scales to >1M cells.
   # The remaining entries in this section are optional, but recommended.
   description: |
     Scanpy is a scalable toolkit for analyzing single-cell gene expression data built jointly with anndata.
