@@ -44,7 +44,6 @@ requirements:
     - packaging
     - session-info
     - importlib_metadata
-    - packaging
 
 test:
   imports:
