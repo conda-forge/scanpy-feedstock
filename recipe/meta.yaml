@@ -48,12 +48,12 @@ requirements:
 test:
   imports:
     - scanpy
-  commands:
-    - scanpy
+  # commands:
+  #   - scanpy  # TODO: re-enable for 1.10.0
   requires:
     - pip
-  # commands:
-  #   - pip check  # TODO: fails because of xlrd not being installed, needs to be fixed for anndata
+  commands:
+    - pip check
 
 about:
   home: https://scanpy.org/
