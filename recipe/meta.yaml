@@ -28,9 +28,9 @@ requirements:
     - anndata >=0.7.4
     - numpy >=1.17
     - matplotlib-base >=3.4
-    - pandas >=1
+    - pandas >=1.1.1, !=2.1.2
     - scipy >=1.4
-    - seaborn
+    - seaborn !=0.13.0
     - h5py >=3
     - tqdm
     - scikit-learn >=0.24
@@ -43,7 +43,7 @@ requirements:
     - umap-learn >=0.3.10
     - packaging
     - session-info
-    - importlib_metadata
+    - get-annotations
 
 test:
   imports:
