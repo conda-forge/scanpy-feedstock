@@ -52,7 +52,8 @@ test:
   requires:
     - pip
   commands:
-    - pip check
+    # - pip check  # https://github.com/conda-forge/tbb-feedstock/issues/119
+    - python -c 'import importlib.metadata as im; print(im.version("scanpy"))'
 
 about:
   home: https://scanpy.org/
