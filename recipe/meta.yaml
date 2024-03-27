@@ -1,5 +1,5 @@
 {% set name = "scanpy" %}
-{% set version = "1.9.8" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2ab1790d2b82eadb0cf8d487f468beac7a8f6a3a8fd7112d1ae989f8c52a4353
+  sha256: c8b718a546cf657c248946dac56b153357e1d8cd7772003adc4c7b37eb9e8d69
 
 build:
   noarch: python
@@ -24,24 +24,26 @@ requirements:
     - hatch-vcs
   run:
     - python >=3.8
-    - anndata >=0.7.4
-    - numpy >=1.17
+    - anndata >=0.8
+    - numpy >=1.23
     - matplotlib-base >=3.6
-    - pandas >=1.1.1, !=2.1.2
-    - scipy >=1.4
-    - seaborn !=0.13.0
-    - h5py >=3
+    - pandas >=1.5
+    - scipy >=1.8
+    - seaborn >=0.13
+    - h5py >=3.1
     - tqdm
     - scikit-learn >=0.24
-    - statsmodels >=0.11
+    - statsmodels >=0.13
     - patsy
-    - networkx >=2.3
+    - networkx >=2.7
     - natsort
     - joblib
-    - numba >=0.41
-    - umap-learn >=0.3.10
-    - packaging
+    - numba >=0.56
+    - umap-learn >=0.5.1
+    - pynndescent >=0.5
+    - packaging >=21.3
     - session-info
+    - legacy-api-wrap >=1.4
     - get-annotations
 
 test:
@@ -56,7 +58,7 @@ test:
     - python -c 'import importlib.metadata as im; print(im.version("scanpy"))'
 
 about:
-  home: https://scanpy.org/
+  home: https://scverse.org/
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -67,7 +69,7 @@ about:
     It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing.
     The Python-based implementation efficiently deals with datasets of more than one million cells.
   doc_url: https://scanpy.readthedocs.io/
-  dev_url: https://github.com/theislab/scanpy/
+  dev_url: https://github.com/scverse/scanpy/
 
 extra:
   recipe-maintainers:
