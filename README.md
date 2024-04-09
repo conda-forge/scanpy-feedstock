@@ -3,13 +3,13 @@ About scanpy-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scanpy-feedstock/blob/main/LICENSE.txt)
 
-Home: https://scanpy.org/
+Home: https://scverse.org/
 
 Package license: BSD-3-Clause
 
 Summary: Single-Cell Analysis in Python. Scales to >1M cells.
 
-Development: https://github.com/theislab/scanpy/
+Development: https://github.com/scverse/scanpy/
 
 Documentation: https://scanpy.readthedocs.io/
 
