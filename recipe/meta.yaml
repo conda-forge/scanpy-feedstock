@@ -1,5 +1,5 @@
 {% set name = "scanpy" %}
-{% set version = "1.10.2" %}
+{% set version = "1.10.3" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5d1649e73ac35e3ad02b455d8a16fdb16d4c8dc27330e696f4cd4e27f2d879be
+  sha256: 0a644d8fa173ac1c62aed4255de7031bf7501c7ad4441cf6ce99cd638b32f880
 
 build:
   noarch: python
@@ -18,12 +18,12 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
     - hatchling
     - hatch-vcs
   run:
-    - python >=3.8
+    - python >=3.9
     - anndata >=0.8
     - numpy >=1.23
     - matplotlib-base >=3.6
@@ -49,8 +49,8 @@ requirements:
 test:
   imports:
     - scanpy
-  # commands:
-  #   - scanpy  # TODO: re-enable for 1.10.0
+  commands:
+    - scanpy
   requires:
     - pip
   commands:
