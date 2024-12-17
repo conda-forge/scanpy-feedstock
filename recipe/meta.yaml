@@ -47,12 +47,10 @@ requirements:
     - get-annotations
 
 test:
-  imports:
-    - scanpy
-  commands:
-    - scanpy
   requires:
     - pip
+  imports:
+    - scanpy
   commands:
     # - pip check  # https://github.com/conda-forge/tbb-feedstock/issues/119
     - python -c 'import importlib.metadata as im; print(im.version("scanpy"))'
