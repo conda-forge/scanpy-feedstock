@@ -71,5 +71,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - jdblischak
     - flying-sheep
     - ivirshup
