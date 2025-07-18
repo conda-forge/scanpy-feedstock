@@ -72,6 +72,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - ilan-gold
     - jdblischak
     - flying-sheep
     - ivirshup
