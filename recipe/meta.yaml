@@ -1,5 +1,5 @@
 {% set name = "scanpy" %}
-{% set version = "1.11.3" %}
+{% set version = "1.11.4" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ead448f112bb07351897531c24e05627f4b3e0bee0c02f50adf378f4e08e338b
+  sha256: 333189ecac9c7009bf55d416ee2e272e1c490d54c719478f7b4dd1fc294d2f95
 
 build:
   noarch: python
@@ -28,12 +28,12 @@ requirements:
     - numpy >=1.24.1
     - matplotlib-base >=3.7.5
     - pandas >=1.5.3
-    - scipy >=1.8.1,<1.16.0
+    - scipy >=1.8.1
     - seaborn >=0.13.2
     - h5py >=3.7.0
     - tqdm
     - scikit-learn >=1.1.3
-    - statsmodels >=0.14.4
+    - statsmodels >=0.14.5
     - patsy !=1.0.0
     - networkx >=2.7.1
     - natsort
