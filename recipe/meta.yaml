@@ -24,26 +24,27 @@ requirements:
     - hatch-vcs
   run:
     - python >={{ python_min }}
-    - anndata >=0.8
-    - numpy >=1.24.1
-    - matplotlib-base >=3.7.5
-    - pandas >=1.5.3
-    - scipy >=1.8.1
+    - anndata >=0.10.8
+    - numpy >=2
+    - fast-array-utils
+    - matplotlib-base >=3.9
+    - pandas >=2.2.2
+    - scipy >=1.13
     - seaborn >=0.13.2
-    - h5py >=3.7.0
+    - h5py >=3.11
     - tqdm
-    - scikit-learn >=1.1.3
+    - scikit-learn >=1.4.2
     - statsmodels >=0.14.5
-    - patsy !=1.0.0
-    - networkx >=2.7.1
+    - patsy
+    - networkx >=2.8.8
     - natsort
     - joblib
-    - numba >=0.57.1
-    - umap-learn >=0.5.6
+    - numba >=0.60
+    - umap-learn >=0.5.7
     - pynndescent >=0.5.13
-    - packaging >=21.3
+    - packaging >=25
     - session-info2
-    - legacy-api-wrap >=1.4.1
+    - legacy-api-wrap >=1.5
     - typing-extensions
 
 test:
