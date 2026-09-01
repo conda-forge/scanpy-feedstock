@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - scanpy = scanpy.cli:console_main
@@ -23,32 +23,34 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - scverse-misc >=0.0.6
-    - certifi
-    - typing_extensions
     - python >={{ python_min }}
-    - anndata >=0.10.8
-    - numpy >=2
+    # dependencies as listed in the pyproject.toml: https://github.com/scverse/scanpy/blob/a656a33b080a5c1f64b01e841daad76f35f5ec5f/pyproject.toml#L53
+    - anndata >=0.12.4
     - fast-array-utils >=1.4
-    - matplotlib-base >=3.10
-    - pandas >=2.3
-    - scipy >=1.13
-    - seaborn >=0.13.2
     - h5py >=3.11
-    - tqdm
-    - scikit-learn >=1.6
-    - statsmodels >=0.14.5
-    - patsy
-    - networkx >=2.8.8
-    - natsort
     - joblib
-    - numba >=0.60
-    - umap-learn >=0.5.12
-    - pynndescent >=0.5.13
+    - matplotlib-base >=3.10
+    - natsort
+    - networkx >=3.4
+    - numba >=0.61.2
+    - numpy >=2.2.5
     - packaging >=25
+    - pandas >=2.3
+    - patsy
+    - pynndescent >=0.5.13
+    - scikit-learn >=1.6
+    - scipy >=1.15
+    - scverse-misc >=0.1.4
+    - seaborn >=0.13.2
     - session-info2
-    - legacy-api-wrap >=1.5
-    - typing-extensions
+    - statsmodels >=0.14.5
+    - tqdm
+    - typing-extensions # same conda-forge recipe as typing_extensions, which this package version just imports
+    - umap-learn >=0.5.12
+    - zarr >=3.2
+    # further dependencies
+    - certifi # suggested by grayskull here: https://github.com/conda-forge/scanpy-feedstock/pull/38
+    - legacy-api-wrap >=1.5 # suggested by automatic source code inspection here: https://github.com/conda-forge/scanpy-feedstock/pull/15
 
 test:
   requires:
