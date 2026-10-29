@@ -1,5 +1,5 @@
 {% set name = "scanpy" %}
-{% set version = "1.12.4" %}
+{% set version = "1.12.5" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b87a5b1413ab33b69691df69c2084ff4ea8b389728e1542b22145825f88b5037
+  sha256: e665622a61d182329a7fe0f2ccda768bdc01bcf1bf33770c57cee52eb6bd8e1a
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - scanpy = scanpy.cli:console_main
@@ -23,6 +23,7 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
+    - typing_extensions
     - python >={{ python_min }}
     - anndata >=0.10.8
     - certifi
