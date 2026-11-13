@@ -1,5 +1,5 @@
 {% set name = "scanpy" %}
-{% set version = "1.12.5" %}
+{% set version = "1.13.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e665622a61d182329a7fe0f2ccda768bdc01bcf1bf33770c57cee52eb6bd8e1a
+  sha256: 95592e6c6847b0cd62cb776eccabefec8700f3d8836be0c5601b5abdd9f0c89e
 
 build:
   noarch: python
@@ -23,26 +23,28 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
+    - array-api-compat
+    - zarr >=3.2
     - typing_extensions
     - python >={{ python_min }}
-    - anndata >=0.10.8
+    - anndata >=0.12.14
     - certifi
-    - fast-array-utils >=1.4
-    - h5py >=3.11
+    - fast-array-utils >=1.5
+    - h5py >=3.12.1
     - joblib
     - legacy-api-wrap >=1.5
     - matplotlib-base >=3.10
     - natsort
-    - networkx >=2.8.8
-    - numba >=0.60
-    - numpy >=2
+    - networkx >=3.4
+    - numba >=0.61.2
+    - numpy >=2.2.5
     - packaging >=25
     - pandas >=2.3
     - patsy
     - pynndescent >=0.5.13
     - scikit-learn >=1.6
-    - scipy >=1.13
-    - scverse-misc >=0.0.6
+    - scipy >=1.15
+    - scverse-misc >=0.1.6
     - seaborn >=0.13.2
     - session-info2
     - statsmodels >=0.14.5
