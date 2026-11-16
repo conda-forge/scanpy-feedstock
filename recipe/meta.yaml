@@ -23,16 +23,12 @@ requirements:
     - hatchling
     - hatch-vcs
   run:
-    - array-api-compat
-    - zarr >=3.2
-    - typing_extensions
     - python >={{ python_min }}
     - anndata >=0.12.14
-    - certifi
-    - fast-array-utils >=1.5
+    - array-api-compat
+    - fast-array-utils >=1.5  # accel and sparse extras are numba and scipy
     - h5py >=3.12.1
     - joblib
-    - legacy-api-wrap >=1.5
     - matplotlib-base >=3.10
     - natsort
     - networkx >=3.4
@@ -45,12 +41,17 @@ requirements:
     - scikit-learn >=1.6
     - scipy >=1.15
     - scverse-misc >=0.1.6
+    # scverse-misc datasets and settings extras
+    - pooch
+    - pyyaml
+    - pydantic-settings
+    - python-dotenv
     - seaborn >=0.13.2
     - session-info2
     - statsmodels >=0.14.5
     - tqdm
-    - typing-extensions
     - umap-learn >=0.5.12
+    - zarr >=3.2
 
 test:
   requires:
